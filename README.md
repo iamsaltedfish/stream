@@ -22,7 +22,7 @@ yum -y install wget
 ## 一键部署
 ```bash
 部署
-curl -fsSL https://raw.githubusercontent.com/aiocloud/stream/master/scripts/kickstart.sh | bash
+curl -fsSL https://raw.githubusercontent.com/iamsaltedfish/stream/master/scripts/kickstart.sh | bash
 
 升级
 curl -fsSL https://git.io/JkMel | bash
