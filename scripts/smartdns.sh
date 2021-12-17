@@ -56,9 +56,9 @@ cd smartdns && make -j$(nproc) || exit $?
 cd src && cp -f smartdns /usr/bin/smartdns
 
 rm -fr /etc/smartdns && mkdir /etc/smartdns
-wget -O /etc/smartdns/smartdns.conf          https://raw.githubusercontent.com/aiocloud/stream/master/smartdns/smartdns.conf    || exit $?
-wget -O /etc/smartdns/stream.conf            https://raw.githubusercontent.com/aiocloud/stream/master/smartdns/stream.conf      || exit $?
-wget -O /etc/systemd/system/smartdns.service https://raw.githubusercontent.com/aiocloud/stream/master/smartdns/smartdns.service || exit $?
+wget -O /etc/smartdns/smartdns.conf          https://raw.githubusercontent.com/iamsaltedfish/stream/master/smartdns/smartdns.conf    || exit $?
+wget -O /etc/smartdns/stream.conf            https://raw.githubusercontent.com/iamsaltedfish/stream/master/smartdns/stream.conf      || exit $?
+wget -O /etc/systemd/system/smartdns.service https://raw.githubusercontent.com/iamsaltedfish/stream/master/smartdns/smartdns.service || exit $?
 sed -i "s/1.1.1.1/$CURRENT/" /etc/smartdns/stream.conf
 
 cd /opt && rm -fr smartdns
