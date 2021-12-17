@@ -55,7 +55,7 @@ cd ~
 
 OUT_ALERT "[信息] 下载程序中"
 rm -fr release
-wget -O release.zip https://github.com/aiocloud/stream/releases/latest/download/release.zip || exit 1
+wget -O release.zip https://github.com/iamsaltedfish/stream/releases/latest/download/release.zip || exit 1
 
 OUT_ALERT "[信息] 解压程序中"
 unzip release.zip && rm -f release.zip && cd release
@@ -67,7 +67,7 @@ OUT_ALERT "[提示] 复制程序中"
 cp -f stream /usr/bin
 
 OUT_ALERT "[提示] 更新 SmartDNS 中"
-(curl -fsSL https://raw.githubusercontent.com/aiocloud/stream/master/scripts/smartdns.sh | bash > /tmp/smartdns.log 2>&1) || OUT_ERROR "更新 SmartDNS 失败！"
+(curl -fsSL https://raw.githubusercontent.com/iamsaltedfish/stream/master/scripts/smartdns.sh | bash > /tmp/smartdns.log 2>&1) || OUT_ERROR "更新 SmartDNS 失败！"
 
 OUT_ALERT "[提示] 重载服务中"
 systemctl daemon-reload
