@@ -54,7 +54,7 @@ fi
 cd ~
 
 OUT_ALERT "[提示] 部署 SmartDNS 中"
-(curl -fsSL https://raw.githubusercontent.com/aiocloud/stream/master/scripts/smartdns.sh | bash) || OUT_ERROR "部署 SmartDNS 失败！"
+(curl -fsSL https://raw.githubusercontent.com/iamsaltedfish/stream/master/scripts/smartdns.sh | bash) || OUT_ERROR "部署 SmartDNS 失败！"
 
 OUT_ALERT "[提示] 生成密钥中"
 SECRET=$(openssl rand -hex 12)
@@ -67,7 +67,7 @@ fi
 
 OUT_ALERT "[信息] 下载程序中"
 rm -fr release
-wget -O release.zip https://github.com/aiocloud/stream/releases/latest/download/release.zip || OUT_ERROR "下载失败！"
+wget -O release.zip https://github.com/iamsaltedfish/stream/releases/latest/download/release.zip || OUT_ERROR "下载失败！"
 
 OUT_ALERT "[信息] 解压程序中"
 unzip release.zip && rm -f release.zip && cd release
